@@ -3,12 +3,11 @@
     <h1>DailyPlate</h1>
     <p>An App Recipes of Healthy Food Integrate with Gemini AI</p>
     <br>
-    <a href="https://drive.google.com/file/d/1tyPYzLWPHiU1MdHAK3SBCPHyvs3VXqJg/view?usp=sharing" target="_blank">
-        <button style="padding: 10px 20px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; font-size: 16px; cursor: pointer;">
-            Download DailyPlate
-        </button>
+    <a href="https://drive.google.com/file/d/1tyPYzLWPHiU1MdHAK3SBCPHyvs3VXqJg/view?usp=drive_link">
+        <img src="https://github.com/Dzvelocity/DailyPlate/blob/master/asset/button.png" height="80" alt="Download DailyPlate">
     </a>
 </div>
+
 
 ## Features ✨️
 
