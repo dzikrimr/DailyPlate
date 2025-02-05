@@ -89,5 +89,6 @@ Yes! DailyPlate uses **Firebase** for secure storage, and we do not track or sel
 
 ### [Dzvelocity](https://github.com/Dzvelocity/DailyPlate): Developer
 
+---
 
 🚀 **More features & improvements coming soon!**  
