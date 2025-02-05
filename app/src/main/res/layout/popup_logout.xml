@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:layout_gravity="center_horizontal"
+    android:paddingStart="20dp"
+    android:paddingEnd="20dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        app:cardCornerRadius="40dp"
+        app:cardElevation="2dp"
+        android:background="@color/white">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/popup_pass_bg"
+                android:contentDescription="@string/popup_pict"
+                android:paddingTop="50dp"
+                android:layout_marginStart="65dp"/>
+
+            <TextView
+                android:layout_width="327dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/sf_medium"
+                android:text="@string/apakah_anda_yakin_ingin_keluar"
+                android:textAlignment="center"
+                android:textColor="@color/green"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/btn_yes"
+                android:layout_width="135dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginStart="20dp"
+                android:background="@drawable/button_green_background"
+                android:text="@string/ya"
+                android:fontFamily="@font/sf_regular"
+                android:textSize="16sp"
+                android:textAllCaps="false"
+                android:textColor="@color/white"/>
+
+            <Button
+                android:id="@+id/btn_no"
+                android:layout_width="135dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="-48dp"
+                android:layout_marginStart="170dp"
+                android:background="@drawable/button_white_background"
+                android:text="@string/tidak"
+                android:fontFamily="@font/sf_regular"
+                android:textSize="16sp"
+                android:textAllCaps="false"
+                android:textColor="@color/green"/>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

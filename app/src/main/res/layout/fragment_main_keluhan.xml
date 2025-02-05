@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainResepFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/seputar_penyakit"
+            android:fontFamily="@font/sf_bold"
+            android:textColor="@color/green_20"
+            android:textSize="28sp"
+            android:layout_marginTop="35dp"
+            android:textAlignment="center" />
+
+        <ImageView
+            android:id="@+id/back_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/arrow_back"
+            android:layout_marginTop="-30dp"
+            android:layout_marginStart="25dp" />
+
+        <ImageView
+            android:id="@+id/img_resep"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/imgview_resep"
+            android:layout_marginTop="40dp"/>
+
+        <TextView
+            android:id="@+id/kelompok"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/sf_regular"
+            android:textStyle="italic"
+            android:textSize="16sp"
+            android:textColor="@color/green_30"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="40dp"/>
+
+        <TextView
+            android:id="@+id/penyakit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/sf_medium"
+            android:textSize="23sp"
+            android:textColor="@color/green_30"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="-55dp"/>
+
+        <TextView
+            android:id="@+id/deskripsi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/sf_regular"
+            android:textSize="16sp"
+            android:textColor="@color/green_20"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="60dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/ciri_ciri_penyakit"
+            android:fontFamily="@font/sf_medium"
+            android:textSize="28sp"
+            android:textColor="@color/green_20"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="25dp"/>
+
+        <TextView
+            android:id="@+id/listciri"
+            android:layout_width="330dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/sf_regular"
+            android:textSize="19sp"
+            android:textColor="@color/green_sec20"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/tips_pencegahan"
+            android:fontFamily="@font/sf_medium"
+            android:textSize="28sp"
+            android:textColor="@color/green_20"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="25dp"/>
+
+        <TextView
+            android:id="@+id/listtips"
+            android:layout_width="330dp"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="6dp"
+            android:fontFamily="@font/sf_regular"
+            android:textSize="19sp"
+            android:textColor="@color/green_sec20"/>
+
+    </LinearLayout>
+
+</ScrollView>

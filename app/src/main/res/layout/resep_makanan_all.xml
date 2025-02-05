@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="180dp"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="163dp"
+        android:layout_height="209dp"
+        app:cardBackgroundColor="@color/green_sec50"
+        app:cardCornerRadius="20dp"
+        android:layout_marginBottom="20dp">
+
+        <ImageView
+            android:id="@+id/menu_img"
+            android:layout_width="163dp"
+            android:layout_height="163dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/mainresep" />
+
+        <TextView
+            android:id="@+id/nama_makanan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="165dp"
+            android:fontFamily="@font/sf_medium"
+            android:textColor="@color/green_20"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/jml_kalori"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="185dp"
+            android:fontFamily="@font/sf_regular"
+            android:textColor="@color/green_20"
+            android:textSize="11sp" />
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

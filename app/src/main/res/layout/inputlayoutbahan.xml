@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/judul_bahan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/bahan_bahan"
+        android:fontFamily="@font/sf_regular"
+        android:textColor="@color/green_20"
+        android:textSize="16sp"
+        android:layout_marginStart="18dp"/>
+
+    <ImageView
+        android:id="@+id/list_mark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/menu"
+        android:layout_marginTop="35dp"
+        android:layout_marginStart="15dp"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/input_bahan"
+    android:layout_marginTop="25dp"
+    android:layout_marginStart="50dp"
+    android:layout_marginEnd="12dp"
+    android:layout_marginBottom="10dp"
+    app:boxBackgroundMode="outline"
+    app:hintEnabled="false"
+    android:background="@drawable/editextlayout">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:hint="@string/bahan"
+        android:layout_marginStart="10dp"
+        android:inputType="textPersonName"
+        android:textColor="@color/green_20"
+        android:backgroundTint="@color/transparent"
+        android:fontFamily="@font/sf_regular"/>
+</com.google.android.material.textfield.TextInputLayout>
+
+</RelativeLayout>
+

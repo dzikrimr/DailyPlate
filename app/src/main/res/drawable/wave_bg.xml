@@ -1,0 +1,28 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="400dp"
+    android:height="200dp"
+    android:viewportWidth="400"
+    android:viewportHeight="200">
+
+    <!-- Lapisan terdepan -->
+    <path
+        android:fillType="nonZero"
+        android:fillColor="@color/green_80"
+        android:fillAlpha="0.8"
+        android:pathData="M0,120 V0 H400 V120 C300,180 100,80 0,120 Z" />
+
+    <!-- Lapisan tengah -->
+    <path
+        android:fillType="nonZero"
+        android:fillColor="@color/green_active"
+        android:fillAlpha="0.9"
+        android:pathData="M0,100 V0 H400 V100 C300,150 100,50 0,100 Z" />
+
+    <!-- Lapisan paling belakang -->
+    <path
+        android:fillType="nonZero"
+        android:fillColor="@color/green"
+        android:fillAlpha="0.7"
+        android:pathData="M0,80 V0 H400 V80 C300,130 100,30 0,80 Z" />
+
+</vector>

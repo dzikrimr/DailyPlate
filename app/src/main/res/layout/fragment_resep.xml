@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/page_resep"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:fontFamily="@font/sf_bold"
+        android:textColor="@color/green_20"
+        android:textSize="28sp"
+        android:layout_marginTop="30dp"
+        android:textAlignment="center" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="154dp"
+        android:layout_height="45dp"
+        android:background="@drawable/bg_tabselected"
+        android:text="@string/resep_makanan"
+        android:textAllCaps="false"
+        android:fontFamily="@font/sf_regular"
+        android:textSize="17sp"
+        android:textColor="@color/green_30"
+        android:layout_marginTop="85dp"
+        android:layout_marginStart="30dp"
+        android:gravity="center"/>
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="154dp"
+        android:layout_height="45dp"
+        android:background="@drawable/bg_tabselected"
+        android:text="@string/resep_saya"
+        android:textAllCaps="false"
+        android:fontFamily="@font/sf_regular"
+        android:textSize="17sp"
+        android:textColor="@color/green_30"
+        android:layout_marginTop="85dp"
+        android:layout_toEndOf="@id/button1"
+        android:layout_marginStart="25dp"
+        android:gravity="center"/>
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/button1"
+        android:layout_marginTop="20dp"/>
+
+</RelativeLayout>

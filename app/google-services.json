@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "894168586973",
+    "project_id": "raionappproject",
+    "storage_bucket": "raionappproject.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:894168586973:android:8839cd7bd609fdfb8f9934",
+        "android_client_info": {
+          "package_name": "com.myappproj.healthapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "894168586973-8lfk9uuhqnkjk6i1s85phreci8de67h3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.myappproj.healthapp",
+            "certificate_hash": "e9d5e74cd116aa566e9148d307a977b2f36131fe"
+          }
+        },
+        {
+          "client_id": "894168586973-79d8unudh4nl5bs0j6hfnpb3qebfaj0t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCRVgBN2ipRReambV9aHhUNJVfTGNY0GeA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "894168586973-79d8unudh4nl5bs0j6hfnpb3qebfaj0t.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,53 @@
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        app:cardBackgroundColor="@color/green_90"
+        app:cardCornerRadius="20dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="20dp"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <ImageView
+            android:id="@+id/menu_img"
+            android:layout_width="377dp"
+            android:layout_height="143dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/menusehat_1" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/menu_tag"
+            android:layout_marginTop="20dp"/>
+
+        <TextView
+            android:id="@+id/tagmenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="23dp"
+            android:layout_marginStart="10dp"
+            android:fontFamily="@font/sf_medium"
+            android:textSize="16sp"
+            android:textColor="@color/green_20"/>
+
+        <TextView
+            android:id="@+id/nama_makanan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="145dp"
+            android:fontFamily="@font/sf_medium"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/jml_kalori"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="170dp"
+            android:fontFamily="@font/sf_regular"
+            android:textColor="@color/green_20"
+            android:textSize="13sp" />
+
+    </androidx.cardview.widget.CardView>

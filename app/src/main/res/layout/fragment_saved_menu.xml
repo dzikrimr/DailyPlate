@@ -1,0 +1,54 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TabResepFragment2">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:layout_marginBottom="20dp">
+
+        <ImageView
+            android:id="@+id/back_arrow"
+            android:contentDescription="back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="10dp"
+            android:src="@drawable/arrow_back" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/resep_disukai"
+            android:fontFamily="@font/sf_bold"
+            android:textColor="@color/green_20"
+            android:textSize="28sp"
+            android:layout_marginEnd="20dp"
+            android:textAlignment="center" />
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerview_mymenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp" />
+
+    <!-- TextView for empty state message -->
+    <TextView
+        android:id="@+id/textview_empty_state"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="@string/empty_state"
+        android:fontFamily="@font/sf_medium"
+        android:textSize="20sp"
+        android:textColor="@color/grey"
+        android:gravity="center" />
+</FrameLayout>

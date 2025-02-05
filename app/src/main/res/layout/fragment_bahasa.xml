@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- Header dengan judul dan tombol kembali -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:layout_marginBottom="20dp">
+
+        <ImageView
+            android:id="@+id/back_arrow"
+            android:contentDescription="back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="10dp"
+            android:src="@drawable/arrow_back" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/ganti_bahasa"
+            android:fontFamily="@font/sf_bold"
+            android:textColor="@color/green_20"
+            android:textSize="28sp"
+            android:layout_marginEnd="20dp"
+            android:textAlignment="center" />
+
+        <ImageView
+            android:id="@+id/checkmark_header"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/ic_check_green"
+            android:contentDescription="apply language"
+            android:layout_marginTop="5dp"
+            android:background="?attr/selectableItemBackground" />
+    </LinearLayout>
+
+    <!-- Pilihan Bahasa Indonesia -->
+    <LinearLayout
+        android:id="@+id/language_indonesia"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="?attr/selectableItemBackground">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/sf_medium"
+            android:text="Bahasa Indonesia"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/checkmark_indonesia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:src="@drawable/ic_check_green" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray" />
+
+    <!-- Pilihan Bahasa Inggris -->
+    <LinearLayout
+        android:id="@+id/language_english"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="?attr/selectableItemBackground">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="English"
+            android:fontFamily="@font/sf_medium"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/checkmark_english"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:src="@drawable/ic_check_green" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Header Section -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:layout_marginBottom="20dp">
+        <ImageView
+            android:id="@+id/back_arrow"
+            android:contentDescription="back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="10dp"
+            android:src="@drawable/arrow_back" />
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/help_center"
+            android:fontFamily="@font/sf_bold"
+            android:textColor="@color/green_20"
+            android:textSize="28sp"
+            android:layout_marginEnd="20dp"
+            android:textAlignment="center" />
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:nestedScrollingEnabled="false"
+        android:layout_marginTop="16dp" />
+
+    <!-- Footer Section -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="16dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/bg_stroke_rounded">
+
+        <TextView
+            android:id="@+id/contact_us"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/contact_us"
+            android:fontFamily="@font/sf_bold"
+            android:textColor="@color/green_20"
+            android:textSize="18sp"
+            android:layout_marginBottom="10dp" />
+
+        <!-- Container untuk button dan card (Email dan Instagram) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:clipChildren="false"
+            android:clipToPadding="false">
+
+            <!-- Email Section -->
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clipChildren="false"
+                android:clipToPadding="false">
+
+                <!-- Kartu Email -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/email_card"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="40dp"
+                    android:visibility="invisible"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="0dp"
+                    android:foreground="?attr/selectableItemBackground"
+                    app:cardBackgroundColor="@color/green_50">
+
+                    <TextView
+                        android:id="@+id/email_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:paddingHorizontal="16dp"
+                        android:text="menaraciptaid"
+                        android:textColor="@color/green_20"
+                        android:textSize="14sp" />
+                </androidx.cardview.widget.CardView>
+
+                <!-- Email Button -->
+                <FrameLayout
+                    android:id="@+id/email_button"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/circle_profilebg2"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:contentDescription="email button">
+
+                    <ImageView
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:src="@drawable/gmail_ic"
+                        android:layout_gravity="center" />
+                </FrameLayout>
+            </FrameLayout>
+
+            <!-- Instagram Section -->
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:clipChildren="false"
+                android:clipToPadding="false">
+
+                <!-- Kartu Instagram -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/instagram_card"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="40dp"
+                    android:visibility="invisible"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="0dp"
+                    android:foreground="?attr/selectableItemBackground"
+                    app:cardBackgroundColor="@color/green_50">
+
+                    <TextView
+                        android:id="@+id/instagram_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:paddingHorizontal="16dp"
+                        android:text="menaraapp"
+                        android:textColor="@color/green_20"
+                        android:textSize="14sp" />
+                </androidx.cardview.widget.CardView>
+
+                <!-- Instagram Button -->
+                <FrameLayout
+                    android:id="@+id/instagram_button"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/circle_profilebg2"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:contentDescription="instagram button">
+
+                    <ImageView
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:src="@drawable/insta_ic"
+                        android:layout_gravity="center" />
+                </FrameLayout>
+            </FrameLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

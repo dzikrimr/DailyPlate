@@ -1,0 +1,23 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="8dp">
+
+    <ImageView
+        android:id="@+id/imageViewIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/symbols_history"/>
+
+    <TextView
+        android:id="@+id/textViewHistoryItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:fontFamily="@font/sf_medium"
+        android:layout_marginStart="10dp"
+        android:textSize="14sp"
+        android:textColor="@color/green_sec20"
+        android:layout_gravity="center_vertical"/>
+</LinearLayout>

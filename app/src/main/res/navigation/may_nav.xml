@@ -1,0 +1,309 @@
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/may_nav"
+    app:startDestination="@id/berandaFragment">
+
+    <fragment
+        android:id="@+id/berandaFragment"
+        android:name="com.myappproj.healthapp.BerandaFragment"
+        android:label="BerandaFragment" >
+        <action
+            android:id="@+id/action_berandaFragment_to_mainResepFragment"
+            app:destination="@id/mainResepFragment" />
+        <action
+            android:id="@+id/action_berandaFragment_to_tabResepFragment2"
+            app:destination="@id/tabResepFragment2" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.myappproj.healthapp.SearchFragment"
+        android:label="SearchFragment" >
+        <action
+            android:id="@+id/action_searchFragment_to_searchHasilFragment"
+            app:destination="@id/searchHasilFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/resepFragment"
+        android:name="com.myappproj.healthapp.ResepFragment"
+        android:label="ResepFragment" >
+        <action
+            android:id="@+id/action_resepFragment_to_aiFilterFragment"
+            app:destination="@id/aiFilterFragment" />
+        <action
+            android:id="@+id/action_resepFragment_to_upResepFragment1"
+            app:destination="@id/upResepFragment1" />
+        <action
+            android:id="@+id/action_resepFragment_to_mainResepFragment"
+            app:destination="@id/mainResepFragment" />
+        <action
+            android:id="@+id/action_resepFragment_to_mainKeluhanFragment"
+            app:destination="@id/mainKeluhanFragment" />
+        <action
+            android:id="@+id/action_resepFragment_to_savedMenuFragment"
+            app:destination="@id/savedMenuFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.myappproj.healthapp.ProfileFragment"
+        android:label="ProfileFragment" >
+        <action
+            android:id="@+id/action_profileFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_accInformationFragment"
+            app:destination="@id/accInformationFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_profileEditFragment"
+            app:destination="@id/profileEditFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_bahasaFragment"
+            app:destination="@id/bahasaFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_helpCenterFragment"
+            app:destination="@id/helpCenterFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+    </fragment>
+
+    <!-- Tambahkan fragment lain yang telah Anda buat -->
+    <fragment
+        android:id="@+id/aiFilterFragment"
+        android:name="com.myappproj.healthapp.AiFilterFragment"
+        android:label="AiFilterFragment" >
+        <action
+            android:id="@+id/action_aiFilterFragment_to_resepFragment"
+            app:destination="@id/resepFragment" />
+        <action
+            android:id="@+id/action_aiFilterFragment_to_mainResepFragment"
+            app:destination="@id/mainResepFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/tabResepFragment2"
+        android:name="com.myappproj.healthapp.TabResepFragment2"
+        android:label="TabResepFragment2">
+        <!-- Aksi untuk navigasi kembali ke ResepFragment -->
+        <action
+            android:id="@+id/action_tabResepFragment2_to_resepFragment"
+            app:destination="@id/resepFragment" />
+        <action
+            android:id="@+id/action_tabResepFragment2_to_berandaFragment"
+            app:destination="@id/berandaFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/mainResepFragment"
+        android:name="com.myappproj.healthapp.MainResepFragment"
+        android:label="MainResepFragment" >
+        <action
+            android:id="@+id/action_mainResepFragment_to_resepFragment"
+            app:destination="@id/resepFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/bahanFragment1"
+        android:name="com.myappproj.healthapp.BahanFragment1"
+        android:label="BahanFragment1">
+        <action
+            android:id="@+id/action_bahanFragment1_to_berandaFragment"
+            app:destination="@id/berandaFragment"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/bahanFragment2"
+        android:name="com.myappproj.healthapp.BahanFragment2"
+        android:label="BahanFragment2">
+        <action
+            android:id="@+id/action_bahanFragment2_to_berandaFragment"
+            app:destination="@id/berandaFragment"/>
+        <action
+            android:id="@+id/action_bahanFragment2_to_berandaFragment2"
+            app:destination="@id/berandaFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/upResepFragment1"
+        android:name="com.myappproj.healthapp.UpResepFragment1"
+        android:label="UpResepFragment1">
+        <action
+            android:id="@+id/action_upResepFragment1_to_berandaFragment"
+            app:destination="@id/berandaFragment"/>
+        <action
+            android:id="@+id/action_upResepFragment1_to_resepFragment"
+            app:destination="@id/resepFragment" />
+        <action
+            android:id="@+id/action_upResepFragment1_to_upResepFragment2"
+            app:destination="@id/upResepFragment2" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/categoryResepFragment"
+        android:name="com.myappproj.healthapp.CategoryResepFragment"
+        android:label="CategoryResepFragment">
+        <action
+            android:id="@+id/action_categoryResepFragment_to_berandaFragment"
+            app:destination="@id/berandaFragment"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/healthNewsFragment"
+        android:name="com.myappproj.healthapp.HealthNewsFragment"
+        android:label="HealthNewsFragment">
+        <action
+            android:id="@+id/action_healthNewsFragment_to_berandaFragment"
+            app:destination="@id/berandaFragment"/>
+    </fragment>
+    <fragment
+        android:id="@+id/mainKeluhanFragment"
+        android:name="com.myappproj.healthapp.MainKeluhanFragment"
+        android:label="MainKeluhanFragment" >
+        <action
+            android:id="@+id/action_mainKeluhanFragment_to_berandaFragment"
+            app:destination="@id/berandaFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/gantiSandiFragment"
+        android:name="com.myappproj.healthapp.GantiSandiFragment"
+        android:label="GantiSandiFragment" >
+        <action
+            android:id="@+id/action_gantiSandiFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.myappproj.healthapp.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_loginFragment_to_forgotPassFragment"
+            app:destination="@id/forgotPassFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_signUpFragment"
+            app:destination="@id/signUpFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_berandaFragment"
+            app:destination="@id/berandaFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/forgotPassFragment"
+        android:name="com.myappproj.healthapp.ForgotPassFragment"
+        android:label="ForgotPassFragment"
+        tools:layout="@layout/fragment_forgot_pass"/>
+
+    <fragment
+        android:id="@+id/signUpFragment"
+        android:name="com.myappproj.healthapp.SignUpFragment"
+        android:label="fragment_sign_up"
+        tools:layout="@layout/fragment_sign_up" >
+        <action
+            android:id="@+id/action_signUpFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_signUpFragment_to_berandaFragment"
+            app:destination="@id/berandaFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchHasilFragment"
+        android:name="com.myappproj.healthapp.SearchHasilFragment"
+        android:label="fragment_search_hasil"
+        tools:layout="@layout/fragment_search_hasil" >
+        <action
+            android:id="@+id/action_searchHasilFragment_to_mainResepFragment"
+            app:destination="@id/mainResepFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/onBoardingFragment"
+        android:name="com.myappproj.healthapp.OnBoardingFragment"
+        android:label="fragment_on_boarding"
+        tools:layout="@layout/fragment_on_boarding" >
+        <action
+            android:id="@+id/action_onBoardingFragment_to_signUpFragment"
+            app:destination="@id/signUpFragment" />
+        <action
+            android:id="@+id/action_onBoardingFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/upResepFragment2"
+        android:name="com.myappproj.healthapp.UpResepFragment2"
+        android:label="fragment_up_resep2"
+        tools:layout="@layout/fragment_up_resep2" >
+        <action
+            android:id="@+id/action_upResepFragment2_to_upResepFragment1"
+            app:destination="@id/upResepFragment1" />
+        <action
+            android:id="@+id/action_upResepFragment2_to_resepFragment"
+            app:destination="@id/resepFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/accInformationFragment"
+        android:name="com.myappproj.healthapp.AccInformationFragment"
+        android:label="fragment_acc_information"
+        tools:layout="@layout/fragment_acc_information" >
+        <action
+            android:id="@+id/action_accInformationFragment_to_profileEditFragment"
+            app:destination="@id/profileEditFragment" />
+        <action
+            android:id="@+id/action_accInformationFragment_to_thirdScreen"
+            app:destination="@id/thirdScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileEditFragment"
+        android:name="com.myappproj.healthapp.ProfileEditFragment"
+        android:label="fragment_profile_edit"
+        tools:layout="@layout/fragment_profile_edit" >
+        <action
+            android:id="@+id/action_profileEditFragment_to_accInformationFragment"
+            app:destination="@id/accInformationFragment" />
+        <action
+            android:id="@+id/action_profileEditFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/thirdScreen"
+        android:name="com.myappproj.healthapp.screens.ThirdScreen"
+        android:label="fragment_third_screen"
+        tools:layout="@layout/fragment_third_screen" />
+    <fragment
+        android:id="@+id/bahasaFragment"
+        android:name="com.myappproj.healthapp.BahasaFragment"
+        android:label="BahasaFragment" >
+        <action
+            android:id="@+id/action_bahasaFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/helpCenterFragment"
+        android:name="com.myappproj.healthapp.HelpCenterFragment"
+        android:label="HelpCenterFragment" >
+        <action
+            android:id="@+id/action_helpCenterFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/savedMenuFragment"
+        android:name="com.myappproj.healthapp.SavedMenuFragment"
+        android:label="SavedMenuFragment" >
+        <action
+            android:id="@+id/action_savedMenuFragment_to_mainResepFragment"
+            app:destination="@id/mainResepFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.myappproj.healthapp.SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" >
+        <action
+            android:id="@+id/action_settingsFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+    </fragment>
+
+
+    <!-- Tambahkan fragment lain sesuai kebutuhan -->
+</navigation>

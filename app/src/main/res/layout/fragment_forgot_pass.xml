@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ForgotPassFragment"
+    android:background="@drawable/signup_bg">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/lupa_sandi"
+        android:layout_marginTop="115dp"
+        android:layout_marginEnd="200dp"
+        android:fontFamily="@font/sf_bold"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/greeting_forgot"
+        android:layout_marginTop="160dp"
+        android:layout_marginEnd="55dp"
+        android:fontFamily="@font/sf_medium"
+        android:textColor="@color/white"
+        android:textSize="19sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/email"
+        android:fontFamily="@font/sf_medium"
+        android:textSize="16sp"
+        android:textColor="@color/green_30"
+        android:layout_marginTop="265dp"
+        android:layout_marginStart="23dp"
+        android:layout_marginBottom="100dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="288dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:boxBackgroundMode="outline"
+        app:boxBackgroundColor="@color/purple_200"
+        app:hintEnabled="false"
+        android:background="@drawable/editextlayout">
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginStart="15dp"
+            android:inputType="textPersonName"
+            android:backgroundTint="@color/transparent"
+            android:hint="@string/email"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btn_kirim"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="54dp"
+        android:layout_marginEnd="54dp"
+        android:layout_marginBottom="400dp"
+        android:background="@drawable/button_green_background"
+        android:text="@string/email_request"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:fontFamily="@font/sf_regular"
+        android:textSize="19sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

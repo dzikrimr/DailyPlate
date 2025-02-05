@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingEnd="10dp"
+    android:paddingStart="5dp">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="115dp"
+        android:layout_height="160dp"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        app:cardBackgroundColor="@color/green_90"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="5dp"
+        android:layout_marginBottom="20dp">
+
+        <ImageView
+            android:id="@+id/bahan_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/placeholder_img3" />
+
+        <TextView
+            android:id="@+id/bahan_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="103dp"
+            android:fontFamily="@font/sf_medium"
+            android:text=""
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="122dp"
+            android:fontFamily="@font/sf_regular"
+            android:text=""
+            android:textColor="@color/black"
+            android:textSize="11sp" />
+
+    </androidx.cardview.widget.CardView>
+
+
+</LinearLayout>

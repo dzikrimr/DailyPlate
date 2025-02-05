@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Shimmer Loading Layout -->
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/shimmer_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:shimmer_auto_start="true"
+        app:shimmer_base_color="@color/green_40"
+        app:shimmer_highlight_color="@android:color/white"
+        android:visibility="visible">
+
+        <!-- Placeholder loading layout -->
+        <include layout="@layout/fragment_home_loading" />
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="none"
+    android:fitsSystemWindows="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/home_bg"
+            android:scaleType="centerCrop"
+            android:fitsSystemWindows="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/selamat_datang_di_dailyplate"
+            android:fontFamily="@font/sf_bold"
+            android:textColor="@color/white"
+            android:textSize="19sp"
+            android:layout_marginTop="60dp"
+            android:layout_marginStart="80dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/home_desc"
+            android:fontFamily="@font/sf_medium"
+            android:textColor="@color/white"
+            android:textSize="13sp"
+            android:layout_marginTop="85dp"
+            android:layout_marginStart="80dp"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/home_pp"
+            android:layout_marginTop="60dp"
+            android:layout_marginStart="15dp"/>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            app:cardBackgroundColor="@color/green_50"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="10dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="165dp">
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/banner_pager"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_marginStart="260dp"
+                android:layout_marginTop="15dp" />
+
+            <TextView
+                android:layout_width="240dp"
+                android:layout_height="wrap_content"
+                android:paddingLeft="15dp"
+                android:paddingTop="15dp"
+                android:fontFamily="@font/sf_bold"
+                android:text="@string/ingin_tahu_berita_kesehatan_terkini"
+                android:textColor="@color/green_20"
+                android:textSize="19sp" />
+
+            <FrameLayout
+                android:layout_width="125dp"
+                android:layout_height="26dp"
+                android:layout_marginTop="70dp"
+                android:layout_marginStart="15dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/button_green_background2" />
+
+                <TextView
+                    android:id="@+id/cek_foodiefolio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cek_foodiefolio"
+                    android:textAllCaps="false"
+                    android:textSize="13sp"
+                    android:fontFamily="@font/sf_bold"
+                    android:textColor="@color/white"
+                    android:layout_gravity="center" />
+            </FrameLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/title_1"
+            android:fontFamily="@font/sf_bold"
+            android:textColor="@color/green_20"
+            android:textSize="19sp"
+            android:layout_marginTop="290dp"
+            android:paddingLeft="20dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/title_2"
+            android:fontFamily="@font/sf_bold"
+            android:textColor="@color/green_20"
+            android:textSize="19sp"
+            android:layout_marginTop="450dp"
+            android:paddingStart="15dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/title_3"
+            android:fontFamily="@font/sf_bold"
+            android:textColor="@color/green_20"
+            android:textSize="19sp"
+            android:layout_marginTop="700dp"
+            android:paddingStart="15dp"/>
+
+        <TextView
+            android:id="@+id/all_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lihat_semua"
+            android:fontFamily="@font/sf_bold"
+            android:textColor="@color/green_20"
+            android:textSize="13sp"
+            android:layout_marginTop="475dp"
+            android:layout_marginEnd="20dp"
+            android:layout_alignParentEnd="true"/>
+
+        <TextView
+            android:id="@+id/all_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lihat_semua"
+            android:fontFamily="@font/sf_bold"
+            android:textColor="@color/green_20"
+            android:textSize="13sp"
+            android:layout_marginTop="725dp"
+            android:layout_marginEnd="20dp"
+            android:layout_alignParentEnd="true"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginTop="320dp"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView2"
+                android:layout_width="match_parent"
+                android:layout_height="175dp"
+                android:layout_marginTop="500dp"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView3"
+                android:layout_width="match_parent"
+                android:layout_height="175dp"
+                android:layout_marginTop="750dp"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="20dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/title_4"
+                android:fontFamily="@font/sf_bold"
+                android:textColor="@color/green_20"
+                android:textSize="19sp"
+                android:layout_marginTop="995dp"/>
+
+            <Button
+                android:id="@+id/alt_upresep"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/bg_primary_no_rounded"
+                android:drawableEnd="@drawable/arrow_ic"
+                android:paddingEnd="15dp"
+                android:paddingBottom="15dp"
+                android:text="@string/title_resep"
+                android:textColor="@color/green"
+                android:fontFamily="@font/sf_bold"
+                android:textSize="13sp"
+                android:textAllCaps="false"
+                android:gravity="left"
+                android:paddingLeft="15dp"
+                android:paddingTop="15dp"
+                android:layout_marginTop="930dp"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1040dp"/>
+
+            <Button
+                android:id="@+id/btn_all"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:background="@drawable/bg_stroke_rounded"
+                android:paddingStart="25dp"
+                android:paddingEnd="25dp"
+                android:layout_gravity="center"
+                android:layout_centerHorizontal="true"
+                android:text="@string/lihat_semua"
+                android:fontFamily="@font/sf_regular"
+                android:textSize="16sp"
+                android:textColor="@color/green_20"
+                android:textAllCaps="false"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="50dp"
+                android:layout_below="@id/recyclerViewMenu"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+</ScrollView>
+</FrameLayout>
