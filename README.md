@@ -1,10 +1,15 @@
 <div align="center">
-	<img src="https://github.com/Dzvelocity/DailyPlate/blob/master/asset/Daily%20Plate.png">
-<h1>DailyPlate</h1>A Recipes of Healthy Food Integrate with Gemini AI<br>
-<br>
-
+    <img src="https://github.com/Dzvelocity/DailyPlate/blob/master/asset/Daily%20Plate.png">
+    <h1>DailyPlate</h1>
+    <p>An App Recipes of Healthy Food Integrate with Gemini AI</p>
+    <br>
+    <a href="https://drive.google.com/file/d/1tyPYzLWPHiU1MdHAK3SBCPHyvs3VXqJg/view?usp=sharing" target="_blank">
+        <button style="padding: 10px 20px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; font-size: 16px; cursor: pointer;">
+            Download DailyPlate
+        </button>
+    </a>
 </div>
-	
+
 ## Features ✨️
 
 - 🍽️ **Thousands of Healthy Recipes** – Explore a variety of nutritious recipes curated for a balanced diet.  
@@ -38,6 +43,8 @@
   <img src="https://github.com/Dzvelocity/DailyPlate/blob/master/asset/Hotpot%203.png?raw=true" width="200" />  
    <img src="https://github.com/Dzvelocity/DailyPlate/blob/master/asset/Hotpot%204.png?raw=true" width="200" />  
 </p> 
+
+#### More [screenshot](https://photos.app.goo.gl/AbieoXG5ctDrpwzp7) here.
 
 ## Data 📊  
 
