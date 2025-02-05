@@ -38,3 +38,45 @@
   <img src="https://github.com/Dzvelocity/DailyPlate/blob/master/asset/Hotpot%203.png?raw=true" width="200" />  
    <img src="https://github.com/Dzvelocity/DailyPlate/blob/master/asset/Hotpot%204.png?raw=true" width="200" />  
 </p> 
+
+## Data 📊  
+
+- **Firebase Firestore** – Used as the main database for storing recipes, user data, and interactions.  
+- **Firebase Authentication** – Secure login and authentication for users.  
+- **Firebase Storage** – Handles recipe image uploads and profile pictures.  
+- **newsdata.io** – Fetches real-time health and nutrition articles for users.  
+- **Machine Learning & AI** – Utilized in NutrAI to analyze and filter recipes based on 8 essential nutrients.  
+- **AI Chat Integration** – Enables real-time chat support for cooking-related queries.  
+
+---
+
+## Privacy 🔒  
+
+DailyPlate prioritizes user privacy and does not collect personal data beyond what is necessary for core functionality.  
+- **No third-party tracking** – Your data stays secure within Firebase.  
+- **Authentication & Security** – Uses Firebase Authentication for secure sign-ins.  
+- **Recipe & Interaction Data** – Only stored within Firebase Firestore for personalized user experience.  
+- **newsdata.io Articles** – Fetched dynamically without storing user-specific data.  
+
+---
+
+## FAQ ❓  
+
+### 1. Why does DailyPlate require an account?  
+Creating an account allows you to save recipes, like posts, and get personalized recommendations.  
+
+### 2. How does NutrAI work?  
+NutrAI uses AI to analyze recipes based on 8 key nutrients, helping you find meals that fit your dietary needs.  
+
+### 3. Can I upload my own recipes?  
+Yes! You can share your favorite healthy recipes with the community, including images and nutrition details.  
+
+### 4. Where do the nutrition articles come from?  
+Articles are fetched in real-time from **newsdata.io**, ensuring you get the latest health and food trends.  
+
+### 5. Is my data safe?  
+Yes! DailyPlate uses **Firebase** for secure storage, and we do not track or sell your data.  
+
+---
+
+🚀 **More features & improvements coming soon!**  
