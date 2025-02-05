@@ -3,7 +3,7 @@
     <h1>DailyPlate</h1>
     <p>An app for healthy recipes with Gemini AI-powered nutrition filters, chat, real-time health articles, and a community recipe sharing platform.</p>
     <br>
-    <a href="https://drive.google.com/file/d/1tyPYzLWPHiU1MdHAK3SBCPHyvs3VXqJg/view?usp=drive_link">
+    <a href="https://drive.google.com/file/d/1K-IgZeJGRthLTgRyn8627oTE65tQVAT_/view?usp=sharing">
         <img src="https://github.com/Dzvelocity/DailyPlate/blob/master/asset/button.png" height="50" alt="Download DailyPlate">
     </a>
 </div>
