@@ -4,7 +4,7 @@
     <p>An App Recipes of Healthy Food Integrate with Gemini AI</p>
     <br>
     <a href="https://drive.google.com/file/d/1tyPYzLWPHiU1MdHAK3SBCPHyvs3VXqJg/view?usp=drive_link">
-        <img src="https://github.com/Dzvelocity/DailyPlate/blob/master/asset/button.png" height="80" alt="Download DailyPlate">
+        <img src="https://github.com/Dzvelocity/DailyPlate/blob/master/asset/button.png" height="50" alt="Download DailyPlate">
     </a>
 </div>
 
