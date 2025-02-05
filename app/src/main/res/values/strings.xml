@@ -218,6 +218,7 @@
     <string name="chat_ai">Tanya tentang</string>
     <string name="posted">Diposting oleh</string>
     <string name="search_hint">Cari menu, bahan, penyakit</string>
+    <string name="all_recipe">Semua Resep</string>
     <string-array name="spinner_data">
         <item>Makanan</item>
         <item>Minuman</item>

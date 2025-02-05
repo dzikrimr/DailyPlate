@@ -24,6 +24,7 @@ import com.myappproj.healthapp.adapter.HorizontalResepAll
 import com.myappproj.healthapp.model.MenuModel
 import render.animations.Bounce
 import render.animations.Render
+import java.util.Locale
 
 class TabResepFragment1 : Fragment() {
 
@@ -39,6 +40,7 @@ class TabResepFragment1 : Fragment() {
     private lateinit var bannerImg: ImageView
     private lateinit var cardView: CardView
     private lateinit var render: Render
+    private lateinit var currentLanguage: String
 
     private var isDataLoaded = false
     private val dataLoadedList = mutableListOf<Boolean>()
@@ -110,6 +112,8 @@ class TabResepFragment1 : Fragment() {
         // Inisialisasi Database Reference
         database = FirebaseDatabase.getInstance().reference
 
+        currentLanguage = Locale.getDefault().language
+
         // Muat data menu
         loadMenuData()
     }
@@ -121,10 +125,15 @@ class TabResepFragment1 : Fragment() {
         dataLoadedList.add(false)
         dataLoadedList.add(false)
 
+        val menuTypeList = getMenuTypeForLanguage(currentLanguage)
+
         val queries = listOf(
-            database.child("resep").orderByChild("menuType").equalTo("Makanan"),
-            database.child("resep").orderByChild("menuType").equalTo("Camilan"),
-            database.child("resep").orderByChild("menuType").equalTo("Minuman")
+            // Makanan Rendah Kalori
+            database.child("resep").orderByChild("menuType").equalTo(menuTypeList[0]),
+            // Camilan Rendah Kalori
+            database.child("resep").orderByChild("menuType").equalTo(menuTypeList[1]),
+            // Minuman
+            database.child("resep").orderByChild("menuType").equalTo(menuTypeList[2])
         )
 
         queries.forEachIndexed { index, query ->
@@ -134,18 +143,25 @@ class TabResepFragment1 : Fragment() {
                     for (snapshot in dataSnapshot.children) {
                         val menu = snapshot.getValue(MenuModel::class.java)
                         when (index) {
-                            0, 1 -> {
+                            0 -> { // Makanan Rendah Kalori
                                 val calorieContent = menu?.calorieContent?.toDoubleOrNull() ?: 0.0
-                                if (calorieContent < 130) menu?.let { menuList.add(it) }
+                                if (calorieContent <= 300) menu?.let { menuList.add(it) }
                             }
-                            2 -> menu?.let { menuList.add(it) }
+                            1 -> { // Camilan Rendah Kalori
+                                val calorieContent = menu?.calorieContent?.toDoubleOrNull() ?: 0.0
+                                if (calorieContent <= 200) menu?.let { menuList.add(it) }
+                            }
+                            2 -> { // Minuman
+                                menu?.let { menuList.add(it) }
+                            }
                         }
                     }
 
+                    // Update data untuk masing-masing adapter
                     when (index) {
-                        0 -> menuAdapter1.setData(menuList)
-                        1 -> menuAdapter2.setData(menuList)
-                        2 -> menuAdapter3.setData(menuList)
+                        0 -> menuAdapter1.setData(menuList)  // Makanan Rendah Kalori
+                        1 -> menuAdapter2.setData(menuList)  // Camilan Rendah Kalori
+                        2 -> menuAdapter3.setData(menuList)  // Minuman
                     }
 
                     dataLoadedList[index] = true
@@ -168,6 +184,17 @@ class TabResepFragment1 : Fragment() {
                 stopShimmerAndShowContent()
             }
         }, 10000) // 10 detik timeout
+    }
+
+    // Fungsi untuk menyesuaikan menuType berdasarkan bahasa yang aktif
+    private fun getMenuTypeForLanguage(language: String): List<String> {
+        return if (language == "id") {
+            // Bahasa Indonesia
+            listOf("Makanan", "Camilan", "Minuman")
+        } else {
+            // Bahasa Inggris
+            listOf("Food", "Snack", "Drink")
+        }
     }
 
     private fun checkAllDataLoaded() {

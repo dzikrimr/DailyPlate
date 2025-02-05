@@ -151,7 +151,7 @@ class UpResepFragment2 : Fragment() {
      * Metode untuk menginisialisasi Spinner.
      */
     private fun initSpinner() {
-        val spinnerData = arrayOf("Makanan", "Minuman", "Camilan")
+        val spinnerData = resources.getStringArray(R.array.spinner_data)
         val adapter = ArrayAdapter(requireContext(), R.layout.bg_spinner, spinnerData)
         spinner1.adapter = adapter
 

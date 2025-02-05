@@ -212,7 +212,7 @@
         android:id="@+id/tv_nutrisi"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Semua Resep"
+        android:text="@string/all_recipe"
         android:fontFamily="@font/sf_bold"
         android:textSize="19sp"
         android:layout_marginTop="20dp"
