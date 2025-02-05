@@ -44,7 +44,7 @@
    <img src="https://github.com/Dzvelocity/DailyPlate/blob/master/asset/Hotpot%204.png?raw=true" width="200" />  
 </p> 
 
-#### More [screenshot](https://photos.app.goo.gl/AbieoXG5ctDrpwzp7) here.
+#### More [screenshot](https://photos.app.goo.gl/cVm38mNBZjL5qc549) here.
 
 ## Data 📊  
 
