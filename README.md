@@ -30,7 +30,7 @@
 >This app is still in the development stage, so it may have many bugs and make it crash. If you find any bugs,
 > please create an issue or contact me via email or instagram.
 
-## Screenshots
+## Screenshots 📷
 
 <p align="center">  
   <img src="https://github.com/Dzvelocity/DailyPlate/blob/master/asset/Hotpot%200.png?raw=true" width="200" />  
