@@ -218,6 +218,7 @@
     <string name="posted">Posted by</string>
     <string name="search_hint">Search menu, ingredients, diseases</string>
     <string name="all_recipe">All Recipe</string>
+    <string name="kelompok_penyakit">Disease Type %s</string>
     <string-array name="spinner_data">
         <item>Food</item>
         <item>Drink</item>

@@ -16,10 +16,10 @@ import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 import com.myappproj.healthapp.model.ItemModel
 import jp.wasabeef.glide.transformations.RoundedCornersTransformation
+import java.util.Locale
 
 class MainKeluhanFragment : Fragment() {
 
-    // Deklarasikan variabel UI
     private lateinit var imgResep: ImageView
     private lateinit var penyakit: TextView
     private lateinit var kelompok: TextView
@@ -27,7 +27,6 @@ class MainKeluhanFragment : Fragment() {
     private lateinit var listCiri: TextView
     private lateinit var listTips: TextView
 
-    // Referensi database
     private lateinit var database: DatabaseReference
 
     override fun onCreateView(
@@ -37,7 +36,6 @@ class MainKeluhanFragment : Fragment() {
         val view = inflater.inflate(R.layout.fragment_main_keluhan, container, false)
         val textKeluhan = view.findViewById<ImageView>(R.id.back_arrow)
 
-        // Inisialisasi UI
         imgResep = view.findViewById(R.id.img_resep)
         penyakit = view.findViewById(R.id.penyakit)
         kelompok = view.findViewById(R.id.kelompok)
@@ -45,17 +43,14 @@ class MainKeluhanFragment : Fragment() {
         listCiri = view.findViewById(R.id.listciri)
         listTips = view.findViewById(R.id.listtips)
 
-        // Inisialisasi referensi database
         database = FirebaseDatabase.getInstance().reference.child("keluhan")
 
-        // Ambil data diseases dari argumen
         val diseases = arguments?.getString("diseases")
         if (diseases != null) {
             fetchDataFromFirebase(diseases)
         }
 
         textKeluhan.setOnClickListener {
-            // Navigasi ke HomeFragment2 saat tombol diklik
             findNavController().navigate(R.id.action_mainKeluhanFragment_to_berandaFragment)
         }
 
@@ -70,35 +65,48 @@ class MainKeluhanFragment : Fragment() {
                     for (data in snapshot.children) {
                         val item = data.getValue(ItemModel::class.java)
 
-                        // Set data ke UI
                         if (item != null) {
+                            val currentLanguage = Locale.getDefault().language
+                            val isEnglish = currentLanguage == "en"
+
+                            val diseaseText = if (isEnglish) item.diseasesEn else item.diseases
+                            val descriptionText = if (isEnglish) item.descriptionEn else item.description
+                            val ciriList = if (isEnglish) item.ciriEn else item.ciri
+                            val tipsList = if (isEnglish) item.tipsEn else item.tips
+
+                            // Tentukan teks kelompok berdasarkan bahasa dan jenis penyakit
+                            val kelompokText = if (isEnglish) {
+                                when (item.jenis.lowercase()) {
+                                    "dalam" -> "Internal Disease"
+                                    "luar" -> "External Disease"
+                                    else -> "Disease Group"
+                                }
+                            } else {
+                                "Kelompok Penyakit ${item.jenis}"
+                            }
+
                             Glide.with(requireContext())
                                 .load(item.imageURL)
-                                .placeholder(R.drawable.placeholder_img) // placeholder jika gambar belum dimuat
+                                .placeholder(R.drawable.placeholder_img)
                                 .centerCrop()
                                 .transform(
-                                    RoundedCornersTransformation(80, 0,
-                                        RoundedCornersTransformation.CornerType.TOP)
+                                    RoundedCornersTransformation(
+                                        80, 0, RoundedCornersTransformation.CornerType.TOP
+                                    )
                                 )
                                 .into(imgResep)
 
-                            penyakit.text = item.diseases
-                            kelompok.text = "Kelompok Penyakit " + item.jenis
-                            deskripsi.text = item.description
-                            val ciriText = StringBuilder()
-                            item.ciri.forEachIndexed { index, ciri ->
-                                ciriText.append("• $ciri\n")
-                            }
-                            listCiri.text = ciriText.toString()
+                            penyakit.text = diseaseText
+                            kelompok.text = kelompokText
+                            deskripsi.text = descriptionText
 
-                            val tipsText = StringBuilder()
-                            item.tips.forEachIndexed { index, tip ->
-                                val tipNumber = index + 1
-                                tipsText.append("$tipNumber. $tip\n\n")
-                            }
-                            listTips.text = tipsText.toString()
+                            val ciriText = ciriList.joinToString("\n") { "• $it" }
+                            listCiri.text = ciriText
 
-                            // Hentikan iterasi setelah menemukan item pertama
+                            val tipsText = tipsList.mapIndexed { index, tip -> "${index + 1}. $tip" }
+                                .joinToString("\n\n")
+                            listTips.text = tipsText
+
                             break
                         }
                     }
@@ -110,5 +118,4 @@ class MainKeluhanFragment : Fragment() {
             }
         })
     }
-
 }

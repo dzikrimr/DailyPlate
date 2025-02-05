@@ -103,8 +103,12 @@ class BerandaFragment : Fragment(), HorizontalRecyclerView.ItemClickListener, My
         // Navigasi ke UpResepFragment1
         val altUpresepButton = view.findViewById<Button>(R.id.alt_upresep)
         altUpresepButton.setOnClickListener {
-            findNavController().navigate(R.id.tabResepFragment2)
+            val bundle = Bundle()
+            bundle.putInt("selectedTab", 1)  // Menentukan tab yang dipilih (0 untuk TabResep1)
+
+            findNavController().navigate(R.id.resepFragment, bundle)
         }
+
 
         // Navigasi ke CategoryResepFragment
         val btnAll = view.findViewById<Button>(R.id.btn_all)

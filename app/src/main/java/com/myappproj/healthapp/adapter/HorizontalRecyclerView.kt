@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.myappproj.healthapp.R
 import com.myappproj.healthapp.model.ItemModel
+import java.util.Locale
 
 class HorizontalRecyclerView(private var items: List<ItemModel>) : RecyclerView.Adapter<HorizontalRecyclerView.MyViewHolder>() {
 
@@ -30,6 +31,14 @@ class HorizontalRecyclerView(private var items: List<ItemModel>) : RecyclerView.
         }
 
         fun bind(item: ItemModel) {
+
+            val currentLanguage = Locale.getDefault().language
+            val diseaseText = if (currentLanguage == "en" && !item.diseasesEn.isNullOrEmpty()) {
+                item.diseasesEn
+            } else {
+                item.diseases
+            }
+
             // Load image using Glide library
             Glide.with(itemView)
                 .load(item.imageURL)
@@ -37,7 +46,7 @@ class HorizontalRecyclerView(private var items: List<ItemModel>) : RecyclerView.
                 .centerCrop()
                 .into(imageView)
 
-            textView.text = item.diseases
+            textView.text = diseaseText
         }
     }
 

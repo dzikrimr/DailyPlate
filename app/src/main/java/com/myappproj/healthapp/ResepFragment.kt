@@ -36,6 +36,9 @@ class ResepFragment : Fragment() {
         // Atur adapter untuk ViewPager
         viewPager.adapter = ViewPagerAdapter(requireActivity())
 
+        val selectedTab = arguments?.getInt("selectedTab", 0) ?: 0 // Default ke tab 0 (TabResep1)
+        viewPager.setCurrentItem(selectedTab, false)
+
         // Atur listener untuk button 1
         val button1: Button = view.findViewById(R.id.button1)
         button1.setOnClickListener {
@@ -48,43 +51,51 @@ class ResepFragment : Fragment() {
             viewPager.setCurrentItem(1, true)  // Ganti ke fragment 2
         }
 
-        // Atur listener untuk ViewPager
+        updateHeader(view, selectedTab)
+
         viewPager.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
             override fun onPageSelected(position: Int) {
                 tabChangedListener?.onTabChanged(position)
-                when (position) {
-                    0 -> {
-                        button1.setBackgroundResource(R.drawable.bg_tabselected)
-                        button2.setBackgroundResource(R.drawable.bg_tab_no_selected)
-
-                        button1.typeface = resources.getFont(R.font.sf_medium)
-                        button2.typeface = resources.getFont(R.font.sf_regular)
-
-                        // Ubah teks TextView menjadi "Resep Makanan"
-                        view.findViewById<TextView>(R.id.page_resep).text = getString(R.string.resep_makanan)
-
-                        // Tampilkan BottomNavigationView
-                        (activity as? MainActivity)?.showBottomNavigation()
-                    }
-                    1 -> {
-                        button2.setBackgroundResource(R.drawable.bg_tabselected)
-                        button1.setBackgroundResource(R.drawable.bg_tab_no_selected)
-
-                        button2.typeface = resources.getFont(R.font.sf_medium)
-                        button1.typeface = resources.getFont(R.font.sf_regular)
-
-                        // Ubah teks TextView menjadi "Resep Saya"
-                        view.findViewById<TextView>(R.id.page_resep).text = getString(R.string.resep_saya)
-
-                        // Sembunyikan BottomNavigationView saat TabResepFragment2 ditampilkan
-                        (activity as? MainActivity)?.hideBottomNavigation()
-                    }
-                }
+                updateHeader(view, position)  // Update header berdasarkan tab yang aktif
             }
         })
 
         return view
     }
+
+    private fun updateHeader(view: View, position: Int) {
+            val button1: Button = view.findViewById(R.id.button1)
+            val button2: Button = view.findViewById(R.id.button2)
+
+            when (position) {
+                0 -> {
+                    button1.setBackgroundResource(R.drawable.bg_tabselected)
+                    button2.setBackgroundResource(R.drawable.bg_tab_no_selected)
+
+                    button1.typeface = resources.getFont(R.font.sf_medium)
+                    button2.typeface = resources.getFont(R.font.sf_regular)
+
+                    // Ubah teks TextView menjadi "Resep Makanan"
+                    view.findViewById<TextView>(R.id.page_resep).text = getString(R.string.resep_makanan)
+
+                    // Tampilkan BottomNavigationView
+                    (activity as? MainActivity)?.showBottomNavigation()
+                }
+                1 -> {
+                    button2.setBackgroundResource(R.drawable.bg_tabselected)
+                    button1.setBackgroundResource(R.drawable.bg_tab_no_selected)
+
+                    button2.typeface = resources.getFont(R.font.sf_medium)
+                    button1.typeface = resources.getFont(R.font.sf_regular)
+
+                    // Ubah teks TextView menjadi "Resep Saya"
+                    view.findViewById<TextView>(R.id.page_resep).text = getString(R.string.resep_saya)
+
+                    // Sembunyikan BottomNavigationView saat TabResepFragment2 ditampilkan
+                    (activity as? MainActivity)?.hideBottomNavigation()
+                }
+            }
+        }
 
     // Adapter untuk ViewPager
     private class ViewPagerAdapter(activity: FragmentActivity) : FragmentStateAdapter(activity) {

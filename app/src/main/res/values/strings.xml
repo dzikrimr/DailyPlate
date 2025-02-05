@@ -219,6 +219,7 @@
     <string name="posted">Diposting oleh</string>
     <string name="search_hint">Cari menu, bahan, penyakit</string>
     <string name="all_recipe">Semua Resep</string>
+    <string name="kelompok_penyakit">Kelompok Penyakit %s</string>
     <string-array name="spinner_data">
         <item>Makanan</item>
         <item>Minuman</item>
